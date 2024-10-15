@@ -1,0 +1,80 @@
+.tabs
+  padding: 0
+
+  position: relative
+  background-color: $whiteColorSecond
+  // position: sticky
+  // top: 137px
+  // background-color: $whiteColor
+  // z-index: 2
+.tabs-sticky
+  position: sticky
+  top: 68px
+  z-index: 2
+.tabs-nav
+  color: $grayColor
+  font-weight: 700
+  border-bottom: 1px solid
+  // padding-top: 15px
+  padding-bottom: 15px
+  margin-bottom: 0px
+  padding-top: 30px
+  font-size: 18px
+  position: relative
+  ul
+    display: flex
+    justify-content: space-between
+  li
+    display: inline-block
+    // padding-right: 45px
+    cursor: pointer
+    &:hover,
+    &.active
+      color: $goldColor
+
+.tabs-carriage
+  transition: ease-out 0.5s
+  @include positionElement(2px, 4px, 0,2px, left, bottom)
+  transform: translateY(50%)
+  background-color: $goldColor
+
+.tabs-container
+  p
+    margin: 0 0 15px
+  h3
+    margin: 0px 0 30px
+    font-size: 28px
+    text-transform: uppercase
+  table
+    width: 100%
+    border-spacing: 0
+    border-collapse: collapse
+  td
+    border: 1px solid $grayColorSecond
+    padding: 15px
+  img
+    width: 100%
+
+.tabs-container
+  position: relative
+
+.tabs-item
+  // display: none
+  position: absolute
+  width: 100%
+  visibility: hidden
+  padding: 30px 0
+  &.active
+    visibility: visible
+    position: relative
+
+.tabs-images
+  display: grid
+  grid-template-columns: repeat(6,1fr)
+  gap: 30px
+.tabs-images-item
+  transition: ease-out 0.25s
+  &:hover
+    opacity: 0.75
+  img
+    width: 100%

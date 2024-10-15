@@ -1,0 +1,277 @@
+.animals-main
+  margin-bottom: 45px
+.animals-slider-thumb
+  margin-bottom: 30px
+  .img-cover
+    background-position: center 45%
+
+.thumb-slider-item
+  overflow: hidden
+  border-radius: 30px
+
+.animals-desription
+  h2
+    font-size: $largeSize
+    margin: 0 0 15px
+  p
+    margin: 0 0 15px
+  img
+    width: 100%
+    max-width: 100%
+    position: relative
+    border-radius: 30px
+    overflow: hidden
+  .sales-item-stub-container
+    display: none
+.sticky-sidebar
+  position: sticky
+  top: 100px
+
+.animals-param-container
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 30px
+  margin: 0 0 30px
+.animals-param-item
+  font-weight: 700
+.animals-param-ico
+  width: 35px
+  height: 35px
+  margin-bottom: 8px
+.animals-param-value
+  color: $blueColor
+  font-size: $smallSize
+
+.animals-nav
+  background-color: $whiteColor
+  border-radius: 30px
+  box-shadow: $shadow
+  padding: 30px
+  margin: 0 0 15px
+  h2
+    font-size: $largeSize
+    margin-bottom: 8px
+  h3
+    font-size: $mediumSize
+  li
+    margin-bottom: 8px
+    cursor: pointer
+    &:hover
+      color: $blueColor
+.animals-social-img
+  width: 50px
+  height: 80px
+  margin-left: auto
+  margin-right: 30px
+.cat-social-img
+  width: 70px
+.animals-social-icons
+  margin: auto
+  margin-left: 0
+.animals-social-container
+  display: flex
+
+  span,
+  .a2a_kit
+    margin: auto 0
+    line-height: 1.4 !important
+
+.animals-social
+  background-color: $whiteColor
+  border-radius: 30px
+  box-shadow: $shadow
+  padding: 10px 15px
+  a
+    font-size: 0
+    border-radius: 100%
+    margin: 0 4px
+    display: inline-flex
+    width: 32px
+    height: 32px
+    position: relative
+    overflow: hidden
+    img
+      width: 50%
+      display: block
+      margin: auto
+    &:hover
+      background-color: $grayColor
+
+  .a2a_button_vk
+    background-color: #587EA3
+
+  .a2a_button_telegram
+    background-color: #2CA5E0
+  .a2a_button_odnoklassniki
+    background-color: #F2720C
+
+.animals-parts
+  padding: 30px
+  margin: 0 0 30px
+  border-radius: 30px
+  // border: 1px solid $grayColor
+  box-shadow: $shadow
+  h3
+    font-size: $mediumSize
+    span
+      vertical-align: top
+.animals-parts-item
+  margin-bottom: 30px
+img.animals-parts-ico
+  width: 50px
+  height: 50px
+  margin-right: 15px
+  display: inline-block
+  vertical-align: top
+  border-radius: 0
+.animals-parts-content
+  display: inline-block
+  width: calc( 100% - 80px )
+.animals-speciality
+  background-color: $blueColor
+  border-radius: 30px
+  color: $whiteColor
+  margin-bottom: 30px
+  padding: 15px 30px
+.animals-speciality-container
+  margin: 15px 0 0
+  display: grid
+  gap: 15px
+  grid-template-columns: repeat(4, 1fr)
+.animals-speciality-item
+  display: inline-flex
+  h4
+    margin: auto 0
+  img
+    height: 35px
+    width: 35px
+    margin-right: 15px
+    border-radius: 0
+.fact-hint
+  background-color: $blueColor
+  border-radius: 30px
+  color: $whiteColor
+  margin-bottom: 30px
+  padding: 15px 30px
+  h3
+    margin-bottom: 8px
+  p
+    margin: 0
+
+.animals-param-mobile
+  display: none
+
+.banner-animals
+  position: relative
+  margin: 0 0 30px
+  font-size: 0
+  min-height: 100px
+.banner-animals-info
+  position: absolute
+  right: 0
+  top: 0
+  z-index: 2
+  width: 100%
+  text-align: center
+  color: $whiteColor
+  padding-top: 8px
+  h2
+    font-size: 48px
+    margin: 0
+    margin-left: -30px
+  .btn-container
+    margin-top: 45px
+  span
+    width: 50px
+    display: inline-block
+
+.banner-animals-mobile
+  display: none
+.animals-desription
+  .animals-item-info
+    h2
+      font-size: 18px
+@media (max-width: 1520px)
+  .banner-animals-info
+    h2
+      font-size: 40px
+    .btn-container
+      margin-top: 30px
+@media (max-width: 1360px)
+  .banner-animals-info
+    .btn-container
+      margin-top: 30px
+@media (max-width: 1280px)
+  .banner-animals-info
+    h2
+      font-size: 28px
+
+@media (max-width: 576px)
+  .animals-slider-thumb
+    padding-right: 0px
+    .thumb-slider-container
+      height: 400px
+    .lSSlideWrapper
+      height: calc(100% - 110px)
+
+  .animals-parts-content
+    width: 100%
+  .animals-parts-item
+    img
+      margin: 0 0 15px
+      position: absolute
+
+  .animals-parts-item
+    h3
+      padding-top: 15px
+      padding-left: 65px
+      padding-bottom: 25px
+  .animals-speciality
+    padding: 15px
+  .animals-speciality-container
+    display: block
+  .animals-speciality-item
+    display: inline-flex
+    width: 49%
+    h4
+      font-size: $smallSize
+  .animals-speciality-item img
+    height: 25px
+    width: 25px
+  .animals-param-desk
+    display: none
+  .animals-nav
+    display: none
+
+  .animals-param-mobile
+    display: block
+  .banner-animals
+    img
+      border-radius: 15px
+  .banner-animals-mobile
+    display: block
+  .banner-animals-desk
+    display: none
+  .banner-animals-info
+    text-align: right
+    padding: 15px
+    // width: 65%
+    .btn
+      width: 130px
+      padding: 4px 5px 2px
+      font-size: 12px
+    h2
+      font-size: 18px
+      margin: 0 0 8px
+
+    span
+      display: none
+    .btn-container
+      margin-top: 0px
+  .animals-desription
+    .sales-item-stub-container
+      display: block
+  .animals-desription
+    .animals-item-info
+      h2
+        font-size: 14px

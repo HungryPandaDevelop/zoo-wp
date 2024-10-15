@@ -1,0 +1,69 @@
+.lSSlideOuter,
+.lSSlideWrapper,
+.lightSlider,
+.lslide
+  height: 100%
+
+.lb-nav,
+.lSAction
+  @include positionElement(100%,48px,0,50%)
+  margin-top: -24px
+
+.lb-prev,
+.lb-next,
+.lSPrev,
+.lSNext
+  @include positionElement(48px, 48px, auto, 0%)
+
+  background-color: $whiteColor
+  font-size: 0
+  border: 1px solid $grayColor
+  border-radius: 100%
+  cursor: pointer
+  // transform: translateY(-50%)
+  margin: 0 15px
+  &:hover
+    background-color: $blackColor
+    border-color: $blackColor
+.lb-prev,
+.lSPrev
+  left: 0
+  @include bgImageEl("../images/arrows/carret-left-gray.svg")
+  &:hover
+    background-image: url("../images/arrows/carret-left-white.svg")
+.lb-next,
+.lSNext
+  right: 0
+  @include bgImageEl("../images/arrows/carret-right-gray.svg")
+  &:hover
+    background-image: url("../images/arrows/carret-right-white.svg")
+
+.lSPager
+  @include positionElement(100%, auto, 0, 0px, left, bottom)
+  text-align: center
+  font-size: 0
+  li
+    display: inline-block
+  a
+    width: 27px
+    height: 27px
+    display: inline-block
+    border-radius: 100%
+    margin: 0 10px
+    cursor: pointer
+    position: relative
+    border: 2px solid rgba($blackColor, 0)
+    transition: ease-out 0.5s
+    &::after
+      content: ""
+      @include positionElement(5px, 5px, 50%, 50%)
+      border-radius: 100%
+      background-color: $grayColor
+      transform: translateX(-50%) translateY(-50%)
+  li
+    &.active,
+    &:hover
+      a
+        border-color: rgba($blackColor, 1)
+        &::after
+          background-color: $blackColor

@@ -1,0 +1,86 @@
+.comments-section
+  h3
+    margin-bottom: 15px
+    font-size: 18px
+    padding-top: 4px
+.comments-item
+  border: 1px solid $grayColorSecond
+  padding: 15px
+  margin: 0 0 30px
+.comments-head
+  border-bottom: 1px solid $grayColorSecond
+  display: flex
+  justify-content: space-between
+  margin-bottom: 6px
+.comments-name
+  font-weight: 700
+  margin-right: 15px
+  display: inline-block
+.comments-date
+  display: inline-block
+  font-size: $microSize
+.comments-grade
+  font-weight: 700
+.comments-img
+  width: 60px
+  height: 60px
+  border-radius: 100%
+  overflow: hidden
+  position: relative
+  display: inline-block
+  margin-right: 30px
+  vertical-align: top
+  background-size: cover
+
+.comments-text
+  width: calc(100% - 150px)
+  display: inline-block
+  vertical-align: top
+  font-size: $smallSize
+  h3,p
+    margin: 0
+  h3
+    font-size: $smallSize
+.comments-text-item
+  margin-bottom: 8px
+.comments-form-head
+  display: flex
+  justify-content: space-between
+.comments-stars
+  text-align: right
+  width: 220px
+.stars-ico
+  @include icoEl(20px, 20px, "../images/icons/star-black.svg")
+  cursor: pointer
+  &:hover,
+  &.active
+    background-image: url("../images/icons/star-fill-black.svg")
+.comments-navigation
+  display: flex
+  justify-content: space-between
+  a
+    text-decoration: none
+
+.comments-hint
+  font-size: $smallSize
+
+// .comments-form,
+.btn-container-comments
+  display: none
+  &.active
+    display: block
+.comments-form-stub
+  @include positionElement(100%,100%,0,0, left, top, 2)
+.comments-form-container
+  position: relative
+.btn-container-comments
+  position: absolute
+  top: 175px
+  width: 100%
+  z-index: 2
+  background: $whiteColor
+  box-shadow: $shadow
+  padding: 15px
+  border-radius: 30px
+  h3
+    font-size: 18px

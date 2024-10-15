@@ -1,0 +1,38 @@
+.reviews-item
+  h2
+    font-size: $standartSize
+    color: $blueColor
+    margin: 0
+    text-transform: uppercase
+    display: inline-block
+    vertical-align: middle
+.reviews-text
+  background-color: $whiteColorSecond
+  padding: 45px 15px
+  font-weight: 500
+  color: $blueColor
+  text-align: center
+  margin: 0 0 30px
+  border-radius: 15px
+  position: relative
+  &::after
+    content: ""
+    @include positionElement(20px,20px,22px,calc(100% - 11px))
+    background-color: $whiteColorSecond
+    transform: rotate(45deg)
+
+.reviews-img
+  width: 62px
+  height: 62px
+  border-radius: 100%
+  overflow: hidden
+  position: relative
+  display: inline-block
+  margin-right: 15px
+  vertical-align: top
+  vertical-align: middle
+
+.reviews-date
+  color: $grayColor
+  font-size: $smallSize
+  font-weight: 600

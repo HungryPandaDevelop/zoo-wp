@@ -1,0 +1,65 @@
+
+.product-item--line
+  display: grid
+  grid-template-columns: repeat(9,1fr)
+  border: 1px solid $grayColorSecond
+  position: relative
+  overflow: hidden
+  a
+    text-decoration: none
+  h3
+    font-size: $largeSize
+    margin: 0 0 15px
+    &:hover
+      color: $goldColor
+  .product-item-adv
+    border: 0
+.product-item-img--line
+  position: relative
+  height: 100%
+.product-item-middle
+  display: flex
+  .product-item-description
+    width: 40%
+
+  .product-item-adv
+    margin: 0 auto
+    width: 60%
+.product-item-middle-delimetr
+  width: 1px
+  height: 100px
+  margin: 0 15px
+  background-color: $grayColorSecond
+.product-item-bottom
+  display: flex
+  border-top: 1px solid $grayColorSecond
+  padding-top: 20px
+  .product-item-price
+    width: 30%
+    padding-top: 6px
+  .btn-product-container
+    width: 60%
+    margin-left: auto
+
+@media (max-width: 1280px)
+  .product-item-price
+    font-size: $mediumSize
+@media (max-width: 820px)
+  .product-item--line
+    .product-item-adv
+      display: grid
+      grid-template-columns: repeat(2,1fr)
+    .product-adv-icons
+      width: 100%
+@media (max-width: 576px)
+  .product-item-img--line
+    position: relative
+    height: 280px
+
+  .product-item-bottom
+    display: block
+    .product-item-price
+      width: 100%
+      margin: 0 0 15px
+    .btn-product-container
+      width: 100%

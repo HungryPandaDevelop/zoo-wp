@@ -1,0 +1,55 @@
+.map-filter-container
+  // height: 65px
+  background-color: $whiteColor
+  position: relative
+  padding: 0px 15px 10px
+.map-filter
+  width: 100%
+  display: flex
+
+  .search-container
+    width: 100%
+
+  .btn-filter
+    margin-left: 15px
+.search-tag-container
+  padding: 0 15px
+  @include positionElement(100%, auto, 0, 10px, left, top, 2)
+
+.filter-item-select
+  flex-grow: 1
+  flex-shrink: 1
+  flex-basis: 0
+  display: flex
+  label
+    width: 150px
+    display: inline-block
+    font-size: 14px
+    padding-top: 3px
+
+  .custom-select
+    font-size: 14px
+    height: 26px
+    display: inline-block
+
+.filter-btn-container
+  width: auto
+  margin-top: auto
+  margin-left: auto
+
+@media (max-width: 576px)
+  .btn-filter
+    font-size: 0
+    background: url('../images/icons/filter-black.svg') center no-repeat
+    width: 40px
+    height: 40px
+    border-radius: 6px
+    border-color: $blackColor
+  .search-tag-container
+    position: relative
+    margin-bottom: 8px
+  .map-item:last-child
+    margin-bottom: 90px
+  .search-container
+    label
+      font-size: 12px

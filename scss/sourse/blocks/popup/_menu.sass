@@ -1,0 +1,73 @@
+.menu-hamburger
+	.popup-container
+		background-color: $whiteColor
+		width: 50%
+		height: 100%
+		max-width: 460px
+		margin: 0
+		margin-left: auto
+		color: $blackColor
+		display: flex
+		flex-direction: column
+		border-radius: 0px
+		padding: 25px 15px 30px
+		overflow-y: auto
+		font-size: $mediumSize
+		background-size: 80%
+		@include bgImageEl("../images/menu-bg-2.svg", 80%, center 100%)
+	.btn-container
+		display: flex
+		justify-content: space-between
+		gap: 15px
+	.social
+		// margin-bottom: 30px
+	ul, li
+		padding: 0
+		margin: 0
+		list-style: none
+	.social a
+		margin: 0 15px
+	.logo
+		text-align: center
+		img
+			width: 240px
+	.btn-container
+		// display: flex
+		// gap: 30px
+		.btn
+			width: 100%
+			padding: 4px 5px 3px
+			font-size: 14px
+	.nav-ico a:before
+		top: 8px
+
+.menu-mobile
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	height: 100%
+.popup-nav
+	margin-top: 15px
+	margin-bottom: auto
+	li
+		position: relative
+		padding: 10px 0px
+		max-width: 170px
+		margin: 0 auto
+	a
+		text-decoration: none
+		&[aria-current="page"],
+		&:hover
+			color: $blueColor
+
+.menu-footer-item
+	text-align: center
+.menu-footer-item--feedback
+	margin: 15px 0
+
+@media (max-width: 576px)
+	.menu-hamburger
+		.popup-container
+			width: 100%
+			margin: 0
+			max-width: 100%

@@ -1,0 +1,96 @@
+/*-checkbox-start-*/
+
+.checkbox,
+.radio
+	display: inline-block
+	position: relative
+	padding: 5px
+	padding-left: 25px
+	cursor: pointer
+	user-select: none
+	vertical-align: top
+	label
+		cursor: pointer
+		font-weight: 500
+	em
+		font-style: normal
+	&:last-child
+		margin-right: 0
+	input
+		margin: 0
+		@include positionElement(30px, 100%)
+		opacity: 0
+
+		&:checked~span
+			background-color: $blueColor
+			border-color: $blueColor
+			&:after
+				display: block
+
+	span
+		@include positionElement(20px, 20px, 0px, 5px)
+		border: 1px solid $grayColor
+		transition: ease-out 0.5s
+		cursor: pointer
+		border-radius: 100%
+		&:after
+			content: ""
+			@include positionElement(10px, 10px, 4px,4px)
+			background-color: $whiteColor
+			border-radius: 100%
+
+			display: none
+.agreement
+	span
+		@include positionElement(21px, 21px, 0px, 5px)
+		background-color: $blueColor
+		border-radius: 0%
+		border: 1px solid $whiteColor
+		&:after
+			content: ""
+			background: none
+			@include positionElement(100%, 100%, 0%,0%)
+			@include bgImageEl("../images/icons/agree-lite-white.svg")
+
+	input
+		&:checked
+			& ~ span
+				border-color: $whiteColor
+/*-checkbox-wp-*/
+
+/*-checkbox-react-*/
+.choise-inputs
+	.add-btn
+		margin-right: 8px
+.choise-item
+	display: inline-block
+	margin: 8px 8px
+	position: relative
+	h4
+		font-size: $smallSize
+		margin: 5px
+		text-align: center
+	&.active
+		.choise-item-img
+			border-color: $blueColor
+.choise-item-type
+	@include positionElement(auto, auto, -12px, -11px, right, top, 2)
+	background-color: $blueColor
+	color: $whiteColor
+	font-size: 12px
+	padding: 1px 6px 0px
+	border-radius: 4px
+
+.choise-item-img
+	width: 120px
+	height: 80px
+	border: 3px solid $whiteColor
+	border-radius: 8px
+	position: relative
+	overflow: hidden
+	cursor: pointer
+	img
+		@include positionElement(100%,100%,0,0)
+		object-fit: cover
+
+/*-checkbox-react-*/

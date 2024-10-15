@@ -1,0 +1,84 @@
+.companies-detail-info
+  margin-bottom: 15px
+  line-height: 1.2
+  .social
+    b
+      text-align: right
+    a
+      margin: 0 0 0 8px
+.companies-logo
+  width: 100%
+  margin: 0 auto 30px
+  max-width: 150px
+
+.companies-list-info
+  span, b
+    // width: 50%
+  b
+    font-size: $smallSize
+  li
+    display: flex
+    margin-bottom: 8px
+    justify-content: space-between
+    gap: 8px
+  b
+    text-align: right
+  a
+    &:hover
+      color: $blueColor
+      text-decoration: none
+  .value-cell
+    text-align: right
+    width: 100%
+    a
+      display: inline
+.companies-main-info
+  h3
+    margin-top: 30px
+    margin-bottom: 15px
+.companies-organization
+  margin-top: 30px
+.companies-sidebar
+  h3
+    display: none
+.companies-detail-info-mobile
+  display: none
+@media (max-width: 992px)
+  .companies-list-info
+    li
+      display: block
+      text-align: right
+    b
+      display: block
+      // text-align: left
+    span, b
+      width: 100%
+@media (max-width: 576px)
+  .companies-list-info
+    li
+      display: flex
+      text-align: left
+
+  .thumb-slider-container.noPager
+    height: 290px
+    .lSSlideWrapper
+      height: 100%
+  .companies-main-info h3
+    margin-top: 15px
+    margin-bottom: 10px
+  .companies-sidebar
+    .companies-logo
+      display: none
+      h3
+        display: block
+  .sticky-sidebar
+    .companies-list-info
+      display: none
+  .companies-detail-info-mobile
+    display: block
+    .companies-logo
+      display: none
+    .companies-detail-info
+      margin: 30px 0 15px
+  .companies-detail-info
+    margin: 0

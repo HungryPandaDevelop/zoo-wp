@@ -1,0 +1,89 @@
+
+input
+	-webkit-appearance: none
+	-webkit-border-radius: 0
+	-moz-appearance: none
+	appearance: none
+	background-color: transparent
+
+input:-webkit-autofill
+	-webkit-background-clip: text
+
+.input-decorate,
+.custom-select,
+.file-decorate,
+.react-select
+	padding: 11px 15px 8px
+	border: 0
+	border-radius: 8px
+	font-family: inherit
+	font-size: $standartSize
+	font-weight: 400
+	resize: none
+	width: 100%
+	background: none
+	color: $grayColor
+	border: 1px solid $grayColor
+	transition: ease-out 0.5s
+	background-color: $whiteColor
+	&:focus
+		outline: 0
+		border-color: $blueColor
+	&::placeholder
+		color: $grayColor
+
+textarea.input-decorate
+	height: 100px
+
+.input-search
+	font-size: $smallSize
+	background-color: $whiteColorSecond
+	border-radius: 30px
+	text-transform: initial
+	font-weight: 600
+	border: 0
+	padding: 14px 12px
+	width: 100%
+	color: $blueColor
+	&:focus
+		outline: 0
+	&::placeholder
+		font-weight: 500
+
+.file-decorate-error span,
+.input-error
+	border-color: $redColor
+.mail-error
+	border-color: $orangeColor
+.error-hint
+	color: $redColor
+	margin-top: 2px
+
+.input-error-text
+	position: absolute
+	left: 0
+	top: calc(100% - 2px)
+	// top: 35px
+	color: $redColor
+	font-size: $microSize
+.input-box
+	margin: 0 0 15px
+	position: relative
+.agreement-box
+	text-align: right
+	.wpcf7-acceptance
+		display: inline-block
+
+.complex-line
+	margin-bottom: 15px
+	display: flex
+	justify-content: space-between
+	.search-select
+		width: 80%
+
+.input-date
+	@include bgImageEl("../images/icons/calendar-gray.svg", 20px, calc(100% - 10px) center)
+	// @include bgImageEl(img:none, s:contain, p:center, r:no-repeat);
+
+.input-hide
+	display: none

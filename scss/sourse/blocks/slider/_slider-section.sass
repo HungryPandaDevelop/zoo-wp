@@ -1,0 +1,59 @@
+$offset: 82px
+.multy-slider-container
+  padding-right: 45px
+.slider-section
+
+  .lSSlideWrapper
+    overflow: visible
+    padding-bottom: 56px
+
+  .lSAction
+    width: 110px
+    top: -1 * $offset
+    left: auto
+    right: 0px
+    margin: 0
+  .lSPrev, .lSNext
+    margin: 0
+
+  .head-section
+    display: flex
+
+  h2,
+  h3
+    text-align: left
+    margin: 0
+  h2
+    display: flex
+    align-items: center
+
+    span
+      display: inline-block
+      margin: auto
+
+  .btn
+    width: 270px
+    position: relative
+    z-index: 2
+
+  .btn-container
+    margin: auto
+    margin-right: 0
+
+  .arrow-stub
+    width: 170px
+
+@media (max-width: 820px)
+  // .slider-section
+  .head-section
+    h2
+      font-size: $largeSize
+    .lSAction
+      top: -76px
+    .btn
+      width: 200px
+@media (max-width: 576px)
+  // .slider-section
+  .head-section
+    .arrow-stub
+      display: none

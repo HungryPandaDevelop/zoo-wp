@@ -1,0 +1,106 @@
+.main-home
+  height: 100vh
+  min-height: 620px
+  background-color: $blackColor
+  position: relative
+  color: $whiteColor
+  text-align: center
+  h2
+    margin: 0
+    font-size: $biggest
+    margin-bottom: 30px
+    color: inherit
+
+  h3
+    color: inherit
+    margin: 0 0 45px
+    font-size: $mediumSize
+  .main-home-content
+    position: relative
+    display: flex
+    flex-direction: column
+    height: 100%
+    max-width: 720px
+    // justify-content: space-evenly
+    z-index: 1
+  .btn
+    width: 240px
+    // animation: spin 20s infinite linear
+.main-slider-single
+  height: 100vh
+.main-home-info
+  margin-top: auto
+.scroll-home-container
+  margin-bottom: 15%
+  margin-top: 45px
+.main-home-video
+  video
+    @include positionElement(100%, 100%, 0,0 )
+    object-fit: cover
+    opacity: 0.7
+
+.main-home-img
+  @include positionElement(100%,100%,0,0)
+  opacity: 0.5
+
+/*SLIDER*/
+
+.main-slider-item
+  height: 100vh
+  .main-home-info
+    transition: ease-out 0.25s
+    transform: translateX(-300px)
+    opacity: 0
+  .img-cover
+    opacity: 0.6
+  &.active
+    .main-home-info
+      transform: translateX(0)
+      opacity: 1
+.main-slider-item:not(.last),
+.main-slider-item:not(.first)
+  .main-home-info
+    transition-delay: 0.35s
+
+.main-slider-item.first:not(.clone),
+.main-slider-item.last:not(.clone)
+  .main-home-info
+    transition: none
+
+.main-slider-item.last.active:not(.clone),
+.main-slider-item.first.active:not(.clone)
+  .main-home-info
+    transform: translateX(0)
+    opacity: 1
+    transition: none
+/*SLIDER*/
+
+.main-slider-single
+  position: relative
+  overflow: hidden
+  .img-cover
+    // animation: shake 0.05s infinite alternate;
+
+/* Ключевые кадры анимации */
+@keyframes shake
+    from { transform: translateX(-2px) scale(1.005) ; } /* Начальное положение, смещение влево на 5px */
+    to { transform: translateX(2px) scale(0.995); } /* Конечное положение, смещение вправо на 5px */
+
+.img-mobile
+  display: none
+
+@media (max-width: 576px)
+  .scroll-home-container
+    margin-bottom: 12%
+  .img-desk
+    display: none
+
+  .img-mobile
+    display: block
+  .main-home
+    h2
+      font-size: 40px
+      line-height: 1
+      margin-bottom: 15px
+    h3
+      font-size: 21px

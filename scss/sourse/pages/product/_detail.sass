@@ -1,0 +1,59 @@
+.product-main-detail
+  background-color: $grayColorSecond
+  max-width: 1920px
+  height: calc(100vh - 241px)
+  display: flex
+  position: relative
+
+  h1
+    width: 50%
+    font-size: $hugeSize
+    text-align: left
+    background-color: rgba($whiteColor, 0.7)
+    position: relative
+    text-transform: uppercase
+    padding: 15px 0
+    &::before
+      content: ""
+      @include positionElement(100%,100%,100%,0,right)
+      background-color: rgba($whiteColor, 0.7)
+
+.product-detail-img,
+.product-detail-gallery
+  width: 50%
+
+.product-detail-img
+  position: relative
+  width: 50%
+  height: 100%
+.product-detail-gallery
+  display: grid
+  grid-template-columns: repeat(2,1fr)
+.product-gallery-item
+  width: 100%
+  height: 100%
+  position: relative
+
+.list-includes-yachts
+  margin-top: 60px
+  h3
+    text-transform: uppercase
+    font-size: 28px
+    margin-bottom: 30px
+  ul,li
+    list-style: none
+    padding: 0
+    margin: 0
+    text-transform: uppercase
+    font-weight: 600
+  li
+    vertical-align: top
+    display: inline-block
+    width: 49%
+    margin-bottom: 15px
+    position: relative
+    padding-left: 37px
+    &::before
+      content: ""
+      @include positionElement(22px,22px,0,0)
+      @include bgImageEl("../images/icons/ok-yellow.svg")

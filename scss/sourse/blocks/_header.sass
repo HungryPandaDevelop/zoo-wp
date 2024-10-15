@@ -1,0 +1,202 @@
+
+.stub
+  height: 58px
+
+header
+  @include positionElement(100%, auto, 0, auto, left, top, 4, fixed )
+  background-color: $whiteColor
+  border-bottom: 1px solid $whiteColorSecond
+  min-width: 320px
+
+  a
+    text-decoration: none
+    &:hover
+      color: $blueColor
+  .btn
+    padding: 2px 5px 1px
+    font-size: $smallSize
+.header-main
+  background-color: rgba($blackColor , 0.3)
+  a
+    color: $whiteColor
+  .hamburger-btn
+    background-image: url("../images/icons/hamburger-white.svg")
+  .nav-dog
+    a
+      &::before
+        @include bgImageEl("../images/animals-param-ico/dlitelnost-zhizni-dog-white.svg")
+  .nav-cat
+    a
+      &::before
+        @include bgImageEl("../images/animals-param-ico/dlitelnost-zhizni-koshka-white.svg")
+  .nav-all
+    a
+      &::before
+        @include bgImageEl("../images/animals-param-ico/strana-white.svg")
+  .nav-pitomnik
+    a
+      &::before
+        background-image: url("../images/ico-pitomnik-white.svg")
+  .nav-prijuty
+    a
+      &::before
+        background-image: url("../images/prijuty-white.svg")
+  .nav-obv
+    a
+      &::before
+        background-image: url("../images/ico-obv-white.svg")
+  .btn
+    background: none
+    &:hover
+      background-color: $blueColor
+.logo
+  img
+    transition: ease-out 0.25s
+    width: 140px
+    object-fit: cover
+
+.nav-header
+  width: 100%
+  ul
+    display: flex
+    justify-content: space-between
+    width: 100%
+    font-weight: 600
+    font-size: $smallSize
+    list-style: none
+    padding: 0
+  li
+    position: relative
+    ul
+      display: block
+      position: absolute
+      left: 50%
+      transform: translateX(-50%) translateY(10px)
+      background-color: $whiteColor
+      padding: 0
+      width: 260px
+      border: 1px solid $grayColorSecond
+      font-weight: 400
+      transition: ease-out 0.25s
+      opacity: 0
+      visibility: hidden
+      li
+        border-bottom: 1px solid $grayColorSecond
+        display: block
+        &:last-child
+          border: 0
+      a
+        padding: 16px 20px
+        text-transform: initial
+    &:hover
+      ul
+        opacity: 1
+        visibility: visible
+        transform: translateX(-50%) translateY(0)
+  a
+    position: relative
+    padding: 18px 0
+    padding-right: 20px
+    i
+      @include positionElement(20px,20px, -3px, 50%,right)
+      transform: translateY(-50%)
+      @include bgImageEl("../images/arrows/carret-down-black.svg",24px)
+      font-size: 0
+    &[aria-current="page"],
+    &:hover
+      color: $blueColor
+      i
+        background-image: url("../images/arrows/carret-down-gray.svg")
+.nav-ico a
+  padding-left: 45px
+  padding-right: 5px
+  &:before
+    content: ""
+    @include positionElement(30px,30px,0,15px)
+
+.nav-dog
+  a
+    &::before
+      @include bgImageEl("../images/animals-param-ico/dlitelnost-zhizni-dog-black.svg")
+    &[aria-current="page"],
+    &:hover
+      &::before
+        background-image: url("../images/animals-param-ico/dlitelnost-zhizni-dog.svg")
+.nav-cat
+  a
+    &::before
+      @include bgImageEl("../images/animals-param-ico/dlitelnost-zhizni-koshka-black.svg")
+    &[aria-current="page"],
+    &:hover
+      &::before
+        background-image: url("../images/animals-param-ico/dlitelnost-zhizni-koshka.svg")
+
+.nav-pitomnik
+  a
+    &::before
+      @include bgImageEl("../images/ico-pitomnik-black.svg")
+    &[aria-current="page"],
+    &:hover
+      &::before
+        background-image: url("../images/ico-pitomnik-blue.svg")
+.nav-prijuty
+  a
+    &::before
+      @include bgImageEl("../images/prijuty-black.svg")
+    &[aria-current="page"],
+    &:hover
+      &::before
+        background-image: url("../images/prijuty-blue.svg")
+
+.nav-obv
+  a
+    &::before
+      @include bgImageEl("../images/ico-obv-black.svg")
+    &[aria-current="page"],
+    &:hover
+      &::before
+        background-image: url("../images/ico-obv-blue.svg")
+
+.nav-all
+  a
+    &::before
+      @include bgImageEl("../images/animals-param-ico/strana-black.svg")
+    &[aria-current="page"],
+    &:hover
+      &::before
+        background-image: url("../images/animals-param-ico/strana.svg")
+.feedback-header
+  margin-left: auto
+  gap: 30px
+.user-header
+  position: relative
+
+@media (max-width: 1168px)
+  header
+    .nav-ico a
+      padding-left: 35px
+      font-size: 12px
+
+@media (max-width: 1024px)
+  header
+    .nav-ico
+      a
+        padding-left: 28px
+        padding-right: 10px
+        font-size: 12px
+        &:before
+          width: 20px
+          height: 20px
+          top: 16px
+
+@media (max-width: 576px)
+  .stub
+    height: 53px
+  .feedback-header
+    text-align: right
+  header
+    padding: 6px 0px
+    .btn
+      width: 90px
+  .logo img
+    width: 110px

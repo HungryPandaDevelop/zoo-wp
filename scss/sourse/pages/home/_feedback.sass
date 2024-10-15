@@ -1,0 +1,38 @@
+.feedback-home
+  background-color: $greenColorSecond
+  color: $whiteColor
+  padding: 90px 0
+  h2
+    color: inherit
+    margin: 0 0 30px
+  a
+    color: $goldColor
+  textarea,
+  input
+    // color: $whiteColor
+    // &::placeholder
+    //   color: $whiteColor
+  .form-btn-container
+    text-align: right
+  .btn
+    width: 330px
+.feedback-text
+  a
+    &:hover
+      text-decoration: none
+      color: $whiteColor
+@media (max-width: 992px)
+  .feedback-home
+    h2
+      text-align: center
+    .feedback-text
+      text-align: center
+    .form-btn-container
+      text-align: center
+@media (max-width: 768px)
+  .feedback-home
+    h2
+
+@media (max-width: 576px)
+  .feedback-home
+    padding: 59px 0 60px

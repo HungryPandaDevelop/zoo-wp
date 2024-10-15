@@ -1,0 +1,34 @@
+.popup-filter-line
+  display: flex
+  margin: 0 0 15px
+  .choise-btn
+    margin-bottom: 0
+.popup-container-filter
+  .btn-container
+    text-align: right
+    margin-top: 15px
+    padding-top: 8px
+    border-top: 1px solid $grayColorSecond
+  .btn
+    width: auto
+.popup-filter-line-topic
+  width: 200px
+.popup-filter-line-body
+  width: calc(100% - 200px)
+.popup-filter-head
+  margin-bottom: 15px
+  padding-bottom: 8px
+  border-bottom: 1px solid $grayColorSecond
+  h3
+    text-align: left
+@media (max-width: 576px)
+  .popup-filter-line
+    display: block
+  .popup-filter-line-body
+    width: 100%
+  .popup-container-filter
+    .btn-container
+      display: flex
+      gap: 12px
+      .btn
+        width: 50%

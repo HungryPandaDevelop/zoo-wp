@@ -1,0 +1,75 @@
+.pricelist-section
+
+  .btn
+    margin-bottom: 15px
+  .btn-container
+    text-align: center
+  .whatsapp-btn
+    width: 340px
+
+.btn-hint
+  a
+    text-decoration: none
+
+.pricelist-list
+  margin: 0 auto 45px
+  li
+    display: flex
+    justify-content: space-between
+    border-top: 1px solid $grayColorSecond
+    padding: 25px 0
+    &:last-child
+      border-bottom: 1px solid $grayColorSecond
+  h3
+    font-size: 18px
+    width: calc(100% - 180px)
+    text-transform: initial
+    position: relative
+    span
+      display: inline-block
+      padding-right: 45px
+    .question-ico
+      position: absolute
+      top: 0
+      right: 0
+.pricelist-price
+  font-size: $largeSize
+  font-weight: 700
+
+.question-ico
+  @include icoEl(28px, 28px, "../images/icons/question-black.svg")
+  cursor: pointer
+  position: relative
+
+  &:hover
+    background-image: url("../images/icons/question-gray.svg")
+    .question-popup
+      opacity: 1
+      visibility: visible
+
+.question-popup
+  @include positionElement(560px, auto, 0,50px, right, bottom)
+  border-radius: 4px
+  padding: 30px
+  font-style: normal
+  background-color: $grayColorSecond
+  transition: ease-out 0.5s
+  opacity: 0
+  visibility: hidden
+  font-size: $standartSize
+  font-weight: 500
+  &::after
+    content: ""
+    @include positionElement(20px,20px, 0, -9px, right, bottom)
+    transform: translateX(-50%) rotate(45deg)
+    background-color: $grayColorSecond
+
+@media (max-width: 576px)
+  .question-popup
+    min-width: 300px
+    width: 90vw
+    padding: 8px
+    transform: translateX(50%)
+    &::after
+      right: 50%
+      transform: translateX(-25%) rotate(45deg)

@@ -1,0 +1,31 @@
+.popup-container
+  .checkbox
+    font-size: $smallSize
+
+.popup-send-success
+  @include positionElement(100%,100%,0,0,left,top,2)
+  display: none
+.popup-send-container
+  width: 400px
+  margin: auto
+  background-color: $whiteColor
+  border-radius: 30px
+  text-align: center
+  box-shadow: $shadow
+  padding: 40px
+.popup.send-success
+  .popup-send-success
+    display: flex
+  .form-default
+    opacity: 0
+    visibility: hidden
+  .popup-container
+    background: none
+    box-shadow: none
+  .close-btn
+    display: none
+.popup-send-text
+  margin: 0 0 30px
+  .sales-name
+    font-weight: 700
+    color: $blueColor

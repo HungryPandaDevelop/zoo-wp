@@ -1,0 +1,108 @@
+.product-item
+  background-color: $whiteColor
+  border: 1px solid $grayColorSecond
+  position: relative
+  overflow: hidden
+  height: 100%
+  a
+    text-decoration: none
+
+  h3
+    margin: 0 0 13px
+    font-size: 24px
+    text-transform: initial
+    a
+      display: -webkit-box
+      -webkit-line-clamp: 2
+      -webkit-box-orient: vertical
+      line-clamp: 2
+      position: relative
+      overflow: hidden
+      font-size: inherit
+      &:hover
+        color: $goldColor
+
+.product-item-info
+  padding: 15px
+.product-item-price
+  font-size: $largeSize
+  color: $goldColor
+  font-weight: 700
+
+.product-item-img
+  width: 100%
+  height: 320px
+  display: block
+  position: relative
+  overflow: hidden
+  background-color: $blueColor
+  font-size: 0
+  transform: scale(1.01)
+.product-item-slider
+  height: 100%
+  position: relative
+.product-item-cover
+  @include positionElement(100%,100%,0,0)
+  transition: ease-out 0.5s
+  &:hover
+    transform: scale(1.1)
+
+.product-item-description
+  font-size: $smallSize
+  li
+    margin: 0 0 10px
+  div
+    min-height: 21px
+
+.product-item-liked
+  @include positionElement(20px,20px,0,0,right, top, 2)
+  cursor: pointer
+  margin: 15px
+  @include bgImageEl("../images/icons/like-black.svg")
+  &.active
+    background-image: url("../images/icons/like-fill-black.svg")
+  &:hover
+    background-image: url("../images/icons/like-gray.svg")
+
+.product-item-adv
+  display: flex
+  justify-content: space-between
+  border-top: 1px solid $grayColorSecond
+  padding-top: 15px
+  margin-top: 15px
+  margin-bottom: 15px
+
+.product-adv-icons
+  text-align: center
+  font-size: $smallSize
+  img
+    width: 36px
+    height: 36px
+  span
+    display: block
+    min-height: 16px
+
+.product-adv-icon
+  width: 36px
+  height: 36px
+  display: inline-block
+  background-color: $blackColor
+  border-radius: 100%
+  span
+    display: block
+
+.product-adv-icon-1
+  @include bgImageEl("../images/temp/adv/1.svg", 40%)
+.product-adv-icon-2
+  @include bgImageEl("../images/temp/adv/2.svg", 40%)
+.product-adv-icon-3
+  @include bgImageEl("../images/temp/adv/3.svg", 40%)
+.product-adv-icon-4
+  @include bgImageEl("../images/temp/adv/4.svg", 40%)
+
+.btn-product-container
+  display: flex
+  justify-content: space-between
+  gap: 12px
+  .btn
+    width: 100%

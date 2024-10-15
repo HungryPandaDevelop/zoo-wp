@@ -1,0 +1,53 @@
+.admin-panel
+  // width: 140px
+  text-align: right
+  position: relative
+  &>*
+    vertical-align: middle
+  .likes-btn
+    margin-right: 15px
+.panel-img-container
+  border: 1px solid $grayColorSecond
+  border-radius: 100%
+  padding: 3px
+  display: inline-block
+  margin-right: 15px
+  font-size: 0
+  &:hover,
+  &.active
+    background-color: $blueColor
+  // &::before
+  //   content: ""
+  //   @include positionElement(30px,30px, -30px, 10px)
+  //   @include bgImageEl("../images/arrows/carret-down-black.svg")
+
+.panel-img-account
+  width: 38px
+  height: 38px
+  position: relative
+  border-radius: 100%
+  border: 1px solid $grayColorSecond
+  overflow: hidden
+  cursor: pointer
+  display: inline-block
+  @include bgImageEl("../images/paw-ico.svg")
+
+.header-main
+  .panel-img-account
+    background-image: url("../images/paw-ico-white.svg")
+  .login-btn-ico
+    background-image: url("../images/icons/log-in-white.svg")
+  .logout-btn-ico
+    background-image: url("../images/icons/log-out-white.svg")
+  // .panel-img-container::before
+  //   background-image: url(../images/arrows/carret-down-white.svg)
+  .popup-panel
+    background-color: rgba($whiteColor , 0.2 )
+    color: $whiteColor
+
+@media (max-width: 576px)
+  .panel-img-account
+    width: 28px
+    height: 28px
+  // .panel-img-container::before
+  //   top: 4px

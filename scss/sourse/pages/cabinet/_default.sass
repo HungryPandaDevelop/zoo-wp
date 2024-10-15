@@ -1,0 +1,421 @@
+
+.login-menu
+  max-width: 640px
+  margin: 90px auto 0
+  li
+    margin-bottom: 15px
+  a
+    width: 100%
+
+.err-auth-popup
+  @include positionElement(300px, auto, 50%, 30%, left, top, 2)
+  transform: translateX(-50%) translateY(-50%)
+  padding: 23px 20px 20px
+  border-radius: 26px
+  background-color: $whiteColor
+  box-shadow: $shadow
+  text-align: center
+  h3
+    font-size: 18px
+
+.cabinet-body
+  h1
+    margin-bottom: 30px
+  .btn
+    width: 240px
+  h2
+    color: $blueColor
+    font-size: 28px
+    margin: 45px 0 30px
+  label
+    font-size: 18px
+    display: block
+    margin-bottom: 6px
+  .input-box
+    margin-bottom: 30px
+.input-hint
+  font-size: $smallSize
+  display: block
+  color: $grayColor
+  line-height: 1.2
+  margin: 0 0 12px
+  font-weight: 300
+
+.page-auth
+  input
+    border-color: $blueColor
+    color: $blueColor
+    &::placeholder
+      color: $blueColor
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus
+      color: $blueColor
+  .form
+    max-width: 640px
+    margin: 90px auto 0
+  .btn-container
+    text-align: center
+  .link-forgot
+    display: block
+    text-align: center
+    margin-top: 30px
+
+.posts-list
+  margin-top: 45px
+.posts-list-body
+  margin-top: 25px
+
+.post-item
+  display: flex
+  padding: 8px 0
+  border-bottom: 1px solid $grayColorSecond
+  height: 37px
+  a
+    text-decoration: none
+    &:hover
+      color: $blueColor
+  h3
+    width: 40%
+    font-size: $standartSize
+    display: flex
+    align-items: center
+  .btn-container
+    width: 60%
+    text-align: right
+
+.post-item-head
+  h3,
+  span
+    padding: 13px 0px 8px
+    color: $grayColor
+    font-weight: 500
+  span
+    display: inline-block
+
+.cabinet-form-head
+  display: flex
+  position: sticky
+  top: 165px
+  height: 0
+  // h1
+  //   display: inline-block
+  //   margin: 30px 0
+  //   width: calc(100% - 250px)
+  .cabinet-status
+    // margin-top: 40px
+    width: 25%
+    margin-left: auto
+
+.target-sale-option
+  display: inline-block
+  width: 134px
+  height: 134px
+  border: 1px solid $blueColor
+  border-radius: 10px
+  color: $blueColor
+  text-align: center
+  vertical-align: top
+  margin-right: 20px
+  display: inline-flex
+  cursor: pointer
+  &:last-child
+    margin: 0
+  &.active
+    background-color: $blueColor
+    color: $whiteColor
+  .box
+    margin: auto
+  &.sale
+    i
+      @include bgImageEl("../images/target-sale-blue.svg")
+    &.active
+      i
+        background-image: url("../images/target-sale-white.svg")
+  &.anons
+    i
+      @include bgImageEl("../images/target-anons-blue.svg")
+    &.active
+      i
+        background-image: url("../images/target-anons-white.svg")
+  &.knit
+    i
+      @include bgImageEl("../images/target-knit-blue.svg")
+    &.active
+      i
+        background-image: url("../images/target-knit-white.svg")
+  &.gift
+    i
+      @include bgImageEl("../images/target-gift-blue.svg")
+    &.active
+      i
+        background-image: url("../images/target-gift-white.svg")
+
+  &.porodi-koshki
+    i
+      @include bgImageEl("../images/target-cat-blue.svg")
+    &.active
+      i
+        background-image: url("../images/target-cat-white.svg")
+  &.porodi-sobak
+    i
+      @include bgImageEl("../images/target-dog-blue.svg")
+    &.active
+      i
+        background-image: url("../images/target-dog-white.svg")
+  i
+    display: inline-block
+    width: 65px
+    height: 65px
+  span
+    display: block
+
+.check-race-empty-container
+  margin-top: 5px
+  color: $grayColor
+.check-race-empty
+  position: relative
+  display: inline-block
+
+  margin-top: 10px
+  span
+    display: inline-block
+    position: relative
+    top: 2px
+  i
+    display: inline-block
+    width: 20px
+    height: 20px
+    border: 1px solid $grayColor
+    border-radius: 100%
+    cursor: pointer
+    margin-right: 8px
+    position: relative
+    &::before
+      content: ''
+      @include positionElement(14px, 14px, 2px, 2px)
+      border-radius: 100%
+  i, span
+    vertical-align: middle
+  &.active
+    color: $blueColor
+    i
+      &::before
+        background-color: $blueColor
+
+.field-price
+  position: relative
+  .input-decorate
+    width: 140px
+  .disable
+    opacity: 0.5
+  .symbol
+    position: absolute
+    top: 15px
+    left: 90px
+  .check-race-empty-container
+    margin-top: 5px
+    display: inline-block
+    margin-left: 30px
+
+.choise-btn
+  border: 1px solid $blueColor
+  color: $blueColor
+  padding: 9px 15px 5px
+  border-radius: 8px
+  margin-right: 8px
+  margin-bottom: 8px
+  display: inline-block
+  margin-top:
+  cursor: pointer
+  &.active
+    background-color: $blueColor
+    color: $whiteColor
+  i
+    display: inline-block
+    width: 23px
+    height: 23px
+    margin-right: 5px
+
+  span, i
+    vertical-align: middle
+
+  &.cat
+    i
+      @include bgImageEl("../images/target-cat-blue.svg")
+  &.cat.active
+    i
+      @include bgImageEl("../images/target-cat-white.svg")
+  &.dog
+    i
+      @include bgImageEl("../images/target-dog-blue.svg")
+  &.dog.active
+    i
+      @include bgImageEl("../images/target-dog-white.svg")
+  &.dog-cat
+    i
+      @include bgImageEl("../images/icons-app/dog-cat-blue.svg")
+  &.dog-cat.active
+    i
+      @include bgImageEl("../images/icons-app/dog-cat-white.svg")
+  &.gerl
+    i
+      @include bgImageEl("../images/choise-gender-woman-blue.svg")
+  &.gerl.active
+    i
+      @include bgImageEl("../images/choise-gender-woman-white.svg")
+  &.boy
+    i
+      @include bgImageEl("../images/choise-gender-man-blue.svg")
+  &.boy.active
+    i
+      @include bgImageEl("../images/choise-gender-man-white.svg")
+  &.single-quan
+    i
+      @include bgImageEl("../images/choise-quantity-single-blue.svg")
+  &.single-quan.active
+    i
+      @include bgImageEl("../images/choise-quantity-single-white.svg")
+  &.multy-quan
+    i
+      @include bgImageEl("../images/choise-quantity-multy-blue.svg")
+  &.multy-quan.active
+    i
+      @include bgImageEl("../images/choise-quantity-multy-white.svg")
+
+.cabinet-form-container
+  max-width: 800px
+.choise-inputs
+  .input-hint
+    margin: 0px 0 0 30px
+    max-width: 390px
+.status-chouse-container
+  width: 290px
+.status-chouse-item
+  display: inline-block
+  padding: 3px 10px 0px
+  border: 1px solid $blueColor
+  cursor: pointer
+  border-radius: 4px
+  margin-right: 8px
+  &:hover,
+  &.active
+    background-color: $blueColor
+    color: $whiteColor
+.roof-sales-cabinet
+  margin-bottom: 15px
+.sales-list-hint
+  border: 1px solid $grayColorSecond
+  padding: 15px
+  border-radius: 15px
+  font-size: $microSize
+  padding-right: 25px
+  position: relative
+
+  .close-btn
+    position: absolute
+    right: 0
+    top: 0
+    margin: 8px
+@media (max-width: 1480px)
+  .post-item-btn
+    padding-left: 0
+    padding-right: 0
+@media (max-width: 1280px)
+  .post-item-btn
+    font-size: 13px
+  .status-chouse-item
+    font-size: 13px
+@media (max-width: 1180px)
+  .post-item-btn
+    font-size: 0
+@media (max-width: 576px)
+  .posts-list
+    margin-top: 15px
+  .posts-list-body
+    margin-top: 5px
+
+  .cabinet-form-head
+    display: flex
+    height: auto
+    z-index: 3
+    background: $blueColor
+    margin-left: -15px
+    padding-left: 15px
+    margin-right: -15px
+    padding-right: 15px
+    padding-top: 8px
+    padding-bottom: 8px
+    top: 41px
+    .react-select
+      height: 26px
+      border: 0
+    .cabinet-status
+      width: 100%
+
+  .cabinet-body
+    label
+      font-size: 14px
+    .input-box
+      margin-bottom: 15px
+
+  .post-item
+    h3
+      width: 65%
+    .btn-container
+      width: 35%
+    .copy-btn,
+    .edit-btn,
+    .delete-btn
+      font-size: 0
+      padding-left: 0
+      padding-right: 0
+  .post-item-head h3,
+  .post-item-head span
+    padding: 13px 0px 8px
+    color: #999999
+    font-weight: 400
+    font-size: 14px
+  .post-item-sales
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    height: auto
+    h3
+      grid-column: span 12
+      width: 100%
+      padding: 10px 0 0
+    .vertical-align,
+    .btn-container
+      grid-column: span 6
+      width: 100%
+    .status-chouse-container
+      width: 100%
+  .status-chouse-item
+    padding: 3px 7px 0px
+    margin-right: 4px
+    font-size: 12px
+
+  .complex-line
+    .delete-btn
+      span
+        display: none
+  .choise-inputs
+    .add-btn
+      font-size: 14px
+  .target-sale-option
+    width: 80px
+    height: 80px
+    padding: 0 5px 5px 0
+    margin-right: 8px
+    font-size: 12px
+    line-height: 1
+    i
+      width: 35px
+      height: 35px
+      margin: 0 0 4px
+  .check-race-empty
+    span
+      font-size: 14px
+  // .choise-btn
+  //   padding: 5px 15px 3px
+  //   font-size: 14px

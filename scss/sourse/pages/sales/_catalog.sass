@@ -1,0 +1,135 @@
+.btn-container-sales-catalog
+  text-align: right
+  padding-top: 23px
+.sales-search
+  margin: 30px 0
+.sales-item
+  background-color: $whiteColor
+  position: relative
+  margin-bottom: 30px
+  a
+    text-decoration: none
+
+  h2
+    font-size: $mediumSize
+    text-transform: initial
+    // margin: 0 0 15px
+    a
+      display: -webkit-box
+      -webkit-line-clamp: 2
+      -webkit-box-orient: vertical
+      line-clamp: 2
+      position: relative
+      overflow: hidden
+      &:hover
+        color: $blueColor
+.sales-item-price
+  font-weight: 700
+  color: $blueColor
+.sales-item-type
+  font-size: $smallSize
+  color: $whiteColor
+  padding: 2px 20px 1px
+  border-radius: 15px
+  background-color: $grayColor
+  @include positionElement(auto, auto, -0px, -4px, right, top, 1)
+
+  &.sale
+    background-color: #A55EFF
+  &.anons
+    background-color: #EC76CB
+  &.knit
+    background-color: #FEAB4A
+  &.gift
+    background-color: #ABE155
+.sales-date-item
+  font-size: $smallSize
+  margin-bottom: 4px
+.sales-item-info
+  margin-top: 8px
+  margin-bottom: 8px
+.sales-item-hidden
+  display: none
+// .sales-item-img
+//   height: 250px
+//   display: block
+//   position: relative
+//   overflow: hidden
+//   border-radius: 30px
+//   &.stub-thumb
+//     .img-cover
+//       background-size: 80%
+//   .img-cover
+//     @include positionElement(100%,100%,0,0)
+//     transform: scale(1)
+//     transition: ease-out 0.5s
+//   &.no-img
+//     .img-cover
+//       background-size: 100px
+//   img
+//     @include positionElement(100%,100%,0,0)
+//   &:hover
+//     .img-cover
+//       transform: scale(1.1)
+
+.companies-item-stub,
+.sales-item-stub
+  position: relative
+  width: 100%
+  height: 250px
+  border-radius: 30px
+  margin: 26px 0 0
+  text-align: center
+  color: #fff
+  padding: 15px 40px
+  line-height: 1
+  text-decoration: none
+  font-weight: 700
+  font-size: 35px
+  overflow: hidden
+  @include bgImageEl("../images/prodaja-shhenka-sobaki-koshki-kotenka-obyavleniya.jpg", cover)
+  // i
+    // @include positionElement(85px, 85px, 0, 0, right, bottom)
+    // margin: 15px
+    // @include bgImageEl("../images/icons/plus-white.svg")
+.companies-item-stub
+  height: 240px
+  background-image: url("../images/banner/Registraciya-pitomnika-sobak-koshek-portal-Zoonika.jpg")
+  // margin-top: 0
+.shelter-item-stub
+  background-image: url("../images/v-dar-besplatno-shhenok-sobaka-koshka-kotenok.jpg")
+
+@media (max-width: 576px)
+  .sales-item
+    margin-bottom: 8px
+
+    h2
+      font-size: 14px
+    .btn--blue
+      // background-color: $whiteColor
+      // color: $blueColor
+      // border-color: $blueColor
+      padding: 3px 0 2px
+      font-size: 12px
+    .sales-price
+      font-size: 12px
+  .sales-item-type
+    top: 15px
+    font-size: 12px
+    padding: 2px 6px 1px
+  .sales-item-img
+    height: 115px
+    border-radius: 12px
+  .sales-search
+    margin: 4px 0 30px
+    label
+      font-size: 12px
+  .sales-date-item
+    font-size: 12px
+  .sales-date-item
+    margin-bottom: 5px
+  .companies-item-stub,
+  .sales-item-stub
+    height: 115px
+    border-radius: 13px
+    margin-top: 23px

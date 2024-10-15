@@ -1,0 +1,88 @@
+/* range-sliders */
+.style-range-container
+  position: relative
+  height: 50px
+  // margin: 20px 0 0
+  .slider-track
+    @include positionElement(100%,1px,0,50%)
+    background-color: $whiteColor
+  .range-num
+    @include positionElement(20px,20px,0,28px)
+    text-align: center
+    font-weight: 600
+    font-size: $smallSize
+    &::before
+      content: ''
+      @include positionElement(20px, 20px, 0, -28px)
+      border: 1px solid $whiteColor
+      border-radius: 100%
+      background-color: $blueColor
+      transition: ease-out 0.5s
+  input[type="range"]
+    appearance: none
+    width: 100%
+    margin: 0
+    outline: none
+    background: none
+    pointer-events: none
+    position: absolute
+    z-index: 2
+    // background: red
+  input[type="range"]::-webkit-slider-thumb
+    appearance: none
+    // background-color: $blueColor
+    // border: 1px solid $whiteColor
+    width: 20px
+    height: 20px
+    border-radius: 100%
+    cursor: pointer
+    pointer-events: auto
+    position: relative
+    z-index: 2
+    transition: ease-out 0.5s
+
+  // input[type="range"]:active::-webkit-slider-thumb
+    // transform: scale(2)
+    // animation: useCircle 1s linear 2s infinite alternate
+    // animation: useCircle 1s
+input[type="range"]:active + .range-num
+  color: $goldColor
+  &::before
+    border-color: $goldColor
+    background-color: $goldColor
+    animation: useCircle 1s infinite
+@keyframes useCircle
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.1)
+  100%
+    transform: scale(1)
+
+.range-sliders-input
+  display: flex
+  justify-content: space-between
+  span
+    margin: auto 8px
+  .input-decorate
+    border: 1px solid $grayColorSecond
+    padding-left: 21px
+    padding-right: 12px
+.range-slider-second
+  .slider-track
+    background-color: $grayColorSecond
+    height: 4px
+    border-radius: 6px
+    margin-top: -2px
+  .slider-track-color
+    left: 25%
+    right: 75%
+    background-color: $goldColor
+    width: auto
+
+  input[type="range"]::-webkit-slider-thumb
+    border: 1px solid $goldColor
+    background-color: $whiteColor
+
+.hidden-input-irs
+  display: none

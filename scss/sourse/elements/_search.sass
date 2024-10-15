@@ -1,0 +1,110 @@
+.search-container
+  position: relative
+  z-index: 3
+  .spinner
+    left: auto
+    right: 8px
+  .preloader-container
+    @include positionElement(30px, 100%,0,0)
+    opacity: 0
+    &.active
+      opacity: 1
+// .search-ajax
+//   .search-input
+//     padding-left: 32px
+
+.search
+  // width: 300px
+  position: relative
+  .search-loop,
+  i
+    margin: 8px 13px
+    position: absolute
+    right: 0
+    top: 0
+  i
+    display: none
+  &.search-on
+    .search-loop
+      display: none
+    i
+      display: block
+  .spinner
+    display: none
+    &.active
+      display: block
+
+.search-loop
+  @include icoEl(20px, 20px, '../images/icons/loop-black.svg')
+  &:hover
+    background-image: url('../images/icons/loop-gray.svg')
+
+.search-input
+  font-size: $smallSize
+  border-radius: 10px
+  text-transform: initial
+  font-weight: 600
+  border: 1px solid $grayColor
+  padding: 11px 14px
+  width: 100%
+  color: $blueColor
+
+  &:focus
+    outline: 0
+  &::placeholder
+    font-weight: 500
+
+.search-list
+  @include positionElement(100%, auto,0,calc(100% + 12px),left,top,3)
+  background-color: $whiteColor
+  padding: 15px
+  transition: ease-out 0.5s
+  opacity: 0
+  visibility: hidden
+  border-radius: 15px
+  box-shadow: $shadow
+  a
+    text-decoration: none
+    &:hover
+      color: $blueColor
+  &.active
+    opacity: 1
+    visibility: visible
+  h3
+    font-weight: 600
+    font-size: $smallSize
+    color: $grayColor
+    text-transform: uppercase
+    margin: 0 0 8px 0px
+  li
+    margin-bottom: 10px
+    &:last-child
+      margin-bottom: 0
+
+.search-list-line
+  padding-bottom: 8px
+  margin-bottom: 8px
+  border-bottom: 1px solid $whiteColorSecond
+  &:last-child
+    border-bottom: 0
+    margin-bottom: 0
+    padding-bottom: 0
+.search-tag-box
+  position: relative
+  height: 45px
+.search-tag
+  display: inline-block
+  background-color: $blueColor
+  color: $whiteColor
+  box-shadow: $shadow
+  border-radius: 15px
+  padding: 2px 8px 2px 15px
+  cursor: pointer
+  margin-right: 8px
+  font-size: 12px
+  span
+    margin-right: 3px
+  i
+    @include icoEl(14px, 14px, "../images/icons/close-white.svg")
+    &:hover
+      opacity: 0.8

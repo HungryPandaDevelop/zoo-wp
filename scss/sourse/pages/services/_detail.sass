@@ -1,0 +1,88 @@
+
+.services-main
+	background-color: #345459
+	color: $whiteColor
+	// height: calc(100vh - 172px)
+	height: calc(100vh - 140px)
+	min-height: 620px
+	position: relative
+
+	display: flex
+	flex-direction: column
+	.main-grid
+		width: 100%
+		height: 100%
+
+	h1
+		color: inherit
+		padding-top: 18px
+		padding-bottom: 15px
+		// font-size: 50px
+	.btn
+		width: 280px
+		background: $goldColor
+		color: $blackColor
+		&:hover
+			background: none
+			border-color: $whiteColor
+.services-main-img-container
+	@include positionElement( calc(55.5% - 15px), 100%, calc(44.5% + 15px))
+	video
+		@include positionElement(100%,100%,0,0)
+		object-fit: cover
+	img
+		@include positionElement(80%,80%,50%,50%)
+		max-width: 350px
+		transform: translateX(-50%) translateY(-50%)
+		opacity: 0.75
+.services-main-front
+	position: relative
+	z-index: 2
+.services-main-info
+	display: flex
+	position: relative
+
+.services-main-info-container
+	margin: auto 0
+
+.services-main-price
+	display: inline-block
+	color: $blueColor
+	background-color: $whiteColor
+	padding: 3px 30px
+	border-radius: 30px
+
+.services-main-text
+	margin-bottom: 30px
+	p
+		margin-top: 0
+		margin-bottom: 15px
+		&:last-child
+			margin-bottom: 0
+
+.services-main-wather
+	@include positionElement(calc(44.5% + 15px), 100%, 0)
+	@include bgImageEl("../images/wather-sign.svg", 60%, center)
+
+@media (max-width: 1240px)
+	.services-main
+		height: calc(100vh - 110px)
+		h1
+			font-size: $hugeSize
+@media (max-width: 820px)
+	.services-main-img-container
+		@include positionElement( calc(35.5% - 15px), 100%, calc(64.5% + 15px))
+@media (max-width: 576px)
+	.services-main
+		height: calc(100vh - 98px)
+		h1
+			font-size: $largeSize
+		.main-grid
+			height: 65%
+	.services-main-info-container
+		padding-top: 30px
+	.services-main-img-container
+		width: 100%
+		top: 65%
+		height: 35%
+		left: 0

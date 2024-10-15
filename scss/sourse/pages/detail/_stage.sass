@@ -1,0 +1,55 @@
+
+.stage
+  background-color: $blueColor
+  color: $whiteColor
+  position: relative
+  padding-bottom: 40px
+  h2,h3
+    color: inherit
+
+.stage-num
+  width: 70px
+  height: 70px
+  background-color: $goldColor
+  color: $whiteColor
+  display: flex
+  font-size: 28px
+  font-weight: 700
+  border-radius: 100%
+  margin: 0 0 15px
+  // position: absolute
+  bottom: 0
+  z-index: 2
+  // display: none
+  span
+    margin: auto
+
+.stage-item
+  position: relative
+  height: 100%
+  margin-bottom: 30px
+  // height: 600px
+  h3
+    // font-size: $largeSize
+    margin: 0 0 15px
+    // height: 72px
+.stage-text
+  // margin: 0 0 90px
+
+.border-stub
+  @include positionElement(0%, 50%, 0,130px, right)
+  background-color: $blueColor
+
+.border-stub-3
+  width: calc(100% - 70px)
+.border-stub-2
+  width: calc(75% - 70px)
+.border-stub-1
+  width: calc(50% - 70px)
+
+.border-stage
+  position: absolute
+  width: 430%
+  height: 400px
+  top: -150px
+  // @include bgImageEl("../images/border-dash.svg")

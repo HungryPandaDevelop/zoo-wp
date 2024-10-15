@@ -1,0 +1,98 @@
+.cabinet-nav
+  margin-top: 113px
+  font-size: $mediumSize
+  color: $grayColor
+  height: 440px
+
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+  a, span
+    position: relative
+    margin-bottom: 8px
+    padding-left: 30px
+    &.edit-cabinet
+      &::before
+        content: ""
+        @include positionElement(30px, 30px, 0, -2px)
+        @include bgImageEl("../images/icons/avatar-gray.svg", 20px)
+      &.active,
+      &:hover
+        &::before
+          background-image: url("../images/icons/avatar-blue.svg")
+    &.ads
+      &::before
+        content: ""
+        @include positionElement(30px, 30px, 0, -2px)
+        @include bgImageEl("../images/sales-ico-gray.svg", 20px)
+      &.active,
+      &:hover
+        &::before
+          background-image: url("../images/sales-ico-blue.svg")
+    &.pitomnik
+      &::before
+        content: ""
+        @include positionElement(30px, 30px, 0, -4px)
+        @include bgImageEl("../images/contacts-ico-gray.svg", 20px)
+      &.active,
+      &:hover
+        &::before
+          background-image: url("../images/contacts-ico-blue.svg")
+    &.pets
+      &::before
+        content: ""
+        @include positionElement(30px, 30px, 0, -1px)
+        @include bgImageEl("../images/ico-pitomnik-gray.svg", 18px)
+      &.active,
+      &:hover
+        &::before
+          background-image: url("../images/ico-pitomnik-blue.svg")
+    &.logout
+      &::before
+        content: ""
+        @include positionElement(30px, 30px, 0, -7px)
+        @include bgImageEl("../images/icons/log-out-gray.svg", 14px)
+  a
+    text-decoration: none
+    &.active,
+    &:hover
+      color: $blueColor
+
+@media (max-width: 576px)
+  .cabinet-nav
+    margin-top: 0
+    height: auto
+    font-size: 0
+    position: fixed
+    bottom: 0
+    left: 0
+
+    z-index: 3
+    width: 100%
+    padding: 8px 15px 8px
+    background-color: $whiteColor
+    border-top: 1px solid $blueColor
+    .cabinet-nav-main
+      display: flex
+      justify-content: space-between
+      width: 78%
+      margin: auto
+      li
+        padding: 0
+        margin: 0
+        width: 28px
+        height: 28px
+        display: inline-block
+        &:last-child
+          display: none
+      a, span
+        width: 100%
+        height: 100%
+        display: inline-block
+        &::before
+          width: 100%
+          height: 100%
+          background-size: 85%
+          background-position: center
+          top: 0

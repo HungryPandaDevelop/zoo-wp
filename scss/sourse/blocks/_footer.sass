@@ -1,0 +1,73 @@
+footer
+  position: relative
+  color: $whiteColor
+  font-size: $smallSize
+  background-color: $blackColor
+  .main-grid
+    // border-top: 1px solid $grayColorSecond 
+    padding: 70px 15px 30px
+  ul,li
+    list-style: none
+    padding: 0
+    margin: 0
+  a
+    text-decoration: none
+    &:hover
+      color: $blueColor
+
+  .logo-text
+    font-size: $smallSize
+    margin: 0 0 45px
+    max-width: 300px
+    display: inline-block
+  .footer-links
+    display: flex
+    justify-content: space-between
+    li
+      margin-bottom: 11px
+
+  .social
+    margin-top: 15px
+
+  .nav
+    font-size: $standartSize
+    margin-bottom: 50px
+    li
+      margin-bottom: 12px
+  .nav-second
+    text-transform: uppercase
+    a
+      font-weight: 600
+  h3
+    font-size: $mediumSize
+    color: inherit
+    margin: 0 0 13px
+    text-transform: uppercase
+    a
+      font-weight: 600
+  .feedback
+    text-align: right
+  .btn
+    width: 320px
+.feedback-footer-item
+  display: flex
+  margin: 0 0 15px
+  a
+    margin-left: auto
+  i
+    margin-right: 10px
+
+@media (max-width: 576px)
+  footer
+    .logo-container
+      text-align: center
+    .feedback
+      text-align: center
+    .footer-links
+      display: block
+      text-align: center
+    .btn
+      width: 280px
+  .feedback-footer-item
+    a
+      margin-right: auto

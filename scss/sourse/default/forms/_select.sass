@@ -1,0 +1,108 @@
+/*-custom-select-*/
+.style-select
+	display: none
+.custom-select,
+.search-select,
+.react-select
+	cursor: pointer
+	position: relative
+	padding: 0
+	border: 1px solid $grayColor
+	border-radius: 8px
+	height: 40px
+	input
+		@include positionElement(0,0,0,0)
+		overflow: hidden
+	ul
+
+		@include positionElement(100%, auto, 0, calc(100% + 15px), left, top, 3)
+		border-radius: 12px
+		opacity: 0
+		visibility: hidden
+		overflow-y: auto
+		background-color: $whiteColor
+		// border: 1px solid $blackColor
+		box-shadow: $shadow
+		margin-left: -1px
+		width: calc(100% + 2px)
+		max-height: 180px
+		border-top: 0
+
+		li
+			padding: 5px 14px 3px
+			cursor: pointer
+			transition: ease-out 0.25s
+			&.hide-selected
+				display: none
+			&:hover
+				color: $blueColor
+
+	&.active
+		z-index: 3
+		ul
+			visibility: visible
+			opacity: 1
+
+		i
+			transform: translateY(-50%) rotate(180deg)
+	input
+		cursor: pointer
+		@include positionElement(100%,100%,0,0, left, top, 2)
+		opacity: 0
+		// background-color: rgba(red, 0.2 )
+	span
+		position: relative
+		z-index: 2
+		padding: 1px 15px 0
+		// display: inline-block
+		height: 100%
+		display: flex
+		align-items: center
+		vertical-align: middle
+
+	i
+		@include bgImageEl("../images/arrows/carret-down-gray.svg", 36px)
+		@include positionElement(36px, 36px, 3px, 50%, right, top, 2)
+		transform: translateY(-50%)
+
+/*-custom-select-*/
+
+.search-select
+	// height: 32px
+	border: 0
+	.search-input
+		opacity: 1
+		width: 100%
+		height: 100%
+		border: 1px solid $grayColor
+		// padding: 6px 15px 3px 15px
+		border-radius: 8px
+		background: none
+		padding-right: 30px
+
+	.preloader-container,
+	.close-btn
+		height: 40px
+		width: 40px
+		position: absolute
+		right: 0
+		display: none
+		z-index: 3
+		background-size: 25px
+		opacity: 0.5
+		&.active
+			display: block
+
+@media (max-width: 576px)
+	.custom-select span,
+	.search-select span,
+	.react-select span
+		font-size: 14px
+	.animals-empty
+		margin-top: 30px
+	.search-select
+		.search-input
+			font-size: 14px
+			font-weight: 400
+			&::placeholder
+				font-weight: 400

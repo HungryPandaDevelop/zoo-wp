@@ -1,0 +1,21 @@
+.main-slider
+  height: 400px
+
+.main-slider-container
+  .lSPager
+    bottom: 15px
+    a
+      border-color: $whiteColor
+    li
+      &.active,
+      &:hover
+        a
+          border-color: $goldColor
+          &::after
+            background-color: $goldColor
+.main-slider-item
+  // height: 350px
+  position: relative
+  img
+    @include positionElement(100%,100%,0,0)
+    object-fit: cover

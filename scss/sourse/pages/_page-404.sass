@@ -1,0 +1,26 @@
+.page-404
+  text-align: center
+  // max-width: 440px
+  margin: 0 auto
+.page-404-img
+  @include icoEl(100%, 400px, "../images/404.jpg")
+  display: inline-flex
+  font-size: 80px
+  font-weight: 700
+  color: $whiteColor
+  text-shadow: 0 15px 30px rgba(0 ,0 ,0 , 23%)
+  h1
+    font-size: inherit
+    color: inherit
+    margin: auto
+.page-404-text
+  margin: 30px 0
+
+@media (max-width: 576px)
+  .page-404
+    padding: 0 30px
+    .btn
+      width: 160px
+  .page-404-img
+    height: 300px
+    margin: 50px 0 0

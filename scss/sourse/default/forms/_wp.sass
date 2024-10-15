@@ -1,0 +1,101 @@
+/*.wpcf7-form*/
+.wpcf7-form-control-wrap
+	position: relative
+	text-align: left
+.wpcf7-radio,
+.wpcf7-checkbox,
+.wpcf7-acceptance
+	// padding-left: 30px
+	position: relative
+	display: block
+	font-size: $standartSize
+	.wpcf7-list-item
+		display: inline-block
+		margin: 0
+		margin-right: 15px
+		position: relative
+		padding-left: 30px
+	label
+
+	input
+		position: absolute
+		visibility: hidden
+
+	.wpcf7-list-item-label
+		&:before
+			@include positionElement(20px, 20px, 0px, 0px)
+			border: 1px solid $grayColor
+			background-color: $whiteColor
+			border-radius: 100%
+			cursor: pointer
+		&:after
+			content: ""
+			background: none
+			@include positionElement(20px, 20px, 2px, 2px)
+			background-color: $blueColor
+			border-radius: 100%
+			display: none
+	input
+		&:checked~.wpcf7-list-item-label
+			&:after
+				display: block
+
+.wpcf7-acceptance
+	.wpcf7-list-item-label
+		// @include positionElement(21px, 21px, 0px, 5px)
+		&:before
+			background-color: $blueColor
+			border-radius: 0%
+		// border: 1px solid $whiteColor
+		&:after
+			background: none
+			@include bgImageEl("../images/icons/agree-lite-white.svg")
+
+.wpcf7-spinner
+	background-color: $blueColor
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translateX(-50%)
+	margin: 0
+
+.form-default	.wpcf7 form .wpcf7-response-output
+	@include positionElement(420px,auto,50%,50%)
+	transform: translateX(-50%) translateY(-50%)
+	background-color: $whiteColor
+	color: $blackColor
+	margin: 0
+.wpcf7-not-valid-tip
+	// margin-top: -15px
+	// margin-bottom: 15px
+	position: absolute
+	font-size: $microSize
+.popup form	.wpcf7-response-output
+	position: relative
+	grid-column: span 12
+	font-size: $standartSize
+/*.wpcf7-form*/
+
+/*wp comments*/
+.comment-reply-title
+	display: none
+.comment-form-cookies-consent
+	display: none
+.comment-notes
+	display: none
+/*wp comments*/
+
+.send-successful-topic
+	text-align: center
+	font-size: 21px
+	color: $blueColor
+	font-weight: 700
+	padding: 8px
+	display: none
+.popup.sending
+	.wpcf7 form .wpcf7-response-output
+		display: none
+	.btn-send
+		display: none
+	.send-successful-topic
+		display: block

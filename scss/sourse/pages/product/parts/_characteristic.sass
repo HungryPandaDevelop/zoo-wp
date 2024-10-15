@@ -1,0 +1,34 @@
+.characteristic-grid
+  display: grid
+  grid-template-columns: repeat(12, 1fr)
+  gap: 60px 30px
+.characteristic-item
+  display: flex
+.characteristic-item-img
+  width: 74px
+  height: 74px
+  background-color: $blackColor
+  border-radius: 100%
+  display: inline-flex
+  margin-right: 15px
+  img
+    width: 40%
+    height: 40%
+    margin: auto
+.characteristic-item-info
+  display: flex
+  h3
+    margin: 0
+    font-size: $largeSize
+  span
+    font-size: $grayColor
+    font-size: 12px
+.characteristic-item-container
+  margin: auto 0
+.characteristic-item-text
+  color: $grayColor
+  text-transform: uppercase
+  font-weight: 600
+@media (max-width: 576px)
+  .characteristic-grid
+    gap: 30px

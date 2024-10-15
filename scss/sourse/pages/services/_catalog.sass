@@ -1,0 +1,78 @@
+.services-item
+  background-color: $blueColor
+  color: $whiteColor
+  position: relative
+
+  a
+    text-decoration: none
+    cursor: none
+  h3
+    color: $whiteColor
+    margin-bottom: 8px
+  .services-item-price
+    display: inline-block
+    font-size: $smallSize
+    background-color: $whiteColor
+    padding: 3px 30px
+    color: $blueColor
+    border-radius: 15px
+    text-transform: uppercase
+    font-weight: 600
+  .services-item-text
+    margin-top: 0px
+    position: relative
+    transition: ease-out 0.5s
+    max-height: 0px
+    overflow: hidden
+    opacity: 0
+  .btn-container
+    text-align: right
+    max-width: 80%
+.services-item-stub
+  @include positionElement(100%,100%)
+
+.btn-item-plus
+  width: 84px
+  height: 84px
+  line-height: 88px
+  position: absolute
+  .btn-item-plus-content
+    width: 100%
+    height: 100%
+    border-radius: 100%
+    background-color: $goldColor
+    color: $whiteColor
+    font-size: 60px
+    display: inline-flex
+    transition: ease-out 0.5s
+    opacity: 0
+  span
+    margin: auto
+    font-weight: 200
+.services-item-info
+  padding: 30px 15px 30px
+  position: relative
+  margin-top: auto
+
+.services-item-img
+  height: 414px
+  display: flex
+  position: relative
+  overflow: hidden
+  .img-cover
+    @include positionElement(100%,100%,0,0)
+    transform: scale(1)
+    transition: ease-out 0.5s
+    opacity: 0.8
+  img
+    @include positionElement(100%,100%,0,0)
+  &:hover
+    .img-cover
+      transform: scale(1.1)
+      opacity: 0.6
+    .services-item-text
+      max-height: 300px
+      padding-top: 30px
+      opacity: 1
+    .btn-item-plus-content
+      opacity: 1

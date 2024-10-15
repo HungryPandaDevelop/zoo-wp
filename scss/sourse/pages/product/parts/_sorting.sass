@@ -1,0 +1,68 @@
+
+.catalog-sorting-container
+  display: flex
+  justify-content: space-between
+  margin: 0 0 45px
+  .sidebar-btn
+    display: none
+
+.catalog-sort
+  width: 380px
+  display: flex
+  font-size: $microSize
+  b
+    width: 170px
+    display: inline-block
+    font-weight: 600
+    color: $grayColor
+    text-transform: uppercase
+    margin: auto 0
+  ul
+    font-weight: 600
+    top: 41px
+    li
+      padding: 10px 14px
+      border-bottom: 1px solid $whiteColorSecond
+      &:hover
+        background-color: $whiteColor
+        color: $grayColorSecond
+
+.sort-select-container
+  width: 100%
+
+.sort-select
+  border: 1px solid $grayColorSecond
+  border-radius: 30px
+  font-size: inherit
+  padding: 10px 12px
+  width: 100%
+  margin: auto 0
+
+.catalog-view
+  padding: 5px 0 5px 5px
+
+/*catalog-filter*/
+@media (max-width: 1240px)
+  .catalog-sorting-container
+    display: block
+
+  .catalog-sort
+    display: inline-flex
+    width: calc(100% - 130px)
+  .catalog-view
+    display: inline-block
+    width: 120px
+    text-align: right
+@media (max-width: 820px)
+  .catalog-sorting-container
+    .sidebar-btn
+      display: inline-block
+@media (max-width: 576px)
+  .catalog-sorting-container
+    margin: 0
+  .catalog-sort
+    width: 100%
+  .catalog-view
+    width: 100%
+    text-align: center
+    margin: 15px 0
